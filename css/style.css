@@ -14,51 +14,47 @@
 	font-weight: bold;
 }
 
-body {
-	max-width: 1660px;
-	min-width: 500px;
-}
-
 .header {
-	display: block;
+	display: flex;
+	flex-direction: column;
 	position: relative;
-}
-
-.header::before,
-.header::after {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
+	width: 100%;
 	height: 450px;
-}
-
-.header::before {
-	width: 100%;
+	justify-content: space-around;
+	align-items: center;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+		url(../images/banner-bg.jpg);
+	background-position: top;
+	background-repeat: no-repeat;
 	background-color: #000000;
-	background-position: top;
-	background-repeat: no-repeat;
-	z-index: 1;
+	border:3px solid yellow;
 }
 
-.header::after {
+.menu_and_logo_container {
+	display: flex;
+	position: relative;
 	width: 100%;
-	background-image: url(../images/banner-bg.jpg);
-	background-position: top;
-	background-repeat: no-repeat;
-	z-index: 2;
-	opacity: 0.4;
+	z-index: 3;
+	justify-content: space-around;
+	align-items: center;
+	margin-top: 45px;
+	border: 1px solid white;
+}
+
+.noemi_logo {
+	position: relative;
+	z-index: 3;
+	width: 183px;
+	min-width: 110px;
 }
 
 .menu_container {
 	display: flex;
-	position: absolute;
-	left: 57.5%;
-	top: 45px;
+	position: relative;
 	z-index: 3;
-	justify-content: space-between;
-	width: 30%;
-	height: 40px;
+	align-items: center;
+	list-style-type: none;
+	border: 1px solid green;
 }
 
 .menu_item {
@@ -69,20 +65,19 @@ body {
 	font-family: "Open Sans", sans-serif;
 	text-align: center;
 	text-decoration: none;
+	padding-left: 30px;
 }
-
 
 .burger_menu{
 	display: flex;
-	right: 35px;
-	top: 40px;
+	position: relative;
 	flex-direction: column;
-	position: absolute;
 	z-index: 3;
 	width: 24px;
 	height: 24px;
 	justify-content: space-between;
 }
+
 .burger_menu_item {
 	background-color: white;
 	width: 100%;
@@ -94,8 +89,10 @@ body {
 @media (min-width: 1201px){
 	.menu_container {
 		visibility: visible;
+		position: relative;
 	}
 	.burger_menu {
+		position: absolute;
 		visibility: hidden;
 	}
 }
@@ -103,52 +100,29 @@ body {
 @media (max-width: 1200px){
 	.menu_container {
 		visibility: hidden;
+		position: absolute;
 	}
 	.burger_menu {
 		visibility: visible;
+		position: relative;
 	}
 }
 
-
-.noemi_logo {
+.banner_text {
 	position: relative;
-	background-image: url(../images/noemi-logo.svg);
-	z-index: 3;
-	top: 27px;
-	left: 14.8%;
-	width: 183px;
-	height: 40px;
-	background-repeat: no-repeat;
-}
-
-
-.text_container {
-	display: flex;
 	width: 100%;
-	height: 410px;
-	justify-content: center;
-	top: 0;
-	font-size: 45px;
-	align-items: center;
-}
-
-.text_container .banner_text {
-	position: relative;
-	width: 90%;
-
-	text-align: center;
-	vertical-align: middle;
 	z-index: 3;
-	text-align: center;
 	font-family: 'Open Sans', sans-serif;
-	color: white;
-	font-weight: 700;
 	line-height: 75px;
+	color: white;
 	text-transform: uppercase;
+	text-align: center;
+	font-size: 55px;
 }
 
 .trends_header {
 	display: flex;
+	position: relative;
 	height: 132px;
 	width: 100%;
 	flex-direction: column;
