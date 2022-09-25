@@ -38,6 +38,7 @@
 		<select class="popup_select">
 			<option value="popup_value_1" selected>Почти каждый день</option>
 			<option value="popup_value_2">Каждый день...</option>
+			<input type="hidden" id="visit_freq" value="0">
 		</select>
 
 		<span class="popup_label">Вы подписаны на e-mail рассылку?</span>
@@ -46,6 +47,7 @@
 				<label for="yes_subscr">Да</label>
 				<input id="no_subscr" value="no" type="radio"  name="is_subscribed" class="radio_style">
 				<label for="no_subscr">Нет</label>
+				<input type="hidden" id="is_subscribed" value="yes">
 		</div>
 		
 		<span class="popup_label">Расскажите, какой контент вы хотели 
@@ -123,6 +125,14 @@
 					<span class="article_text">
 					Итак, вы в Питере. Раннее утро. Лед с рек и каналов уже ушел,
 					запущены фонтаны города... Музеи ещё закрыты. Что посмотреть?
+					<!--
+					Итак, вы в Питере. Раннее утро. Лед с рек и каналов уже ушел,
+					запущены фонтаны города... Музеи ещё закрыты. Что посмотреть?
+					Итак, вы в Питере. Раннее утро. Лед с рек и каналов уже ушел,
+					запущены фонтаны города... Музеи ещё закрыты. Что посмотреть?
+					Итак, вы в Питере. Раннее утро. Лед с рек и каналов уже ушел,
+					запущены фонтаны города... Музеи ещё закрыты. Что посмотреть?
+					-->
 					</span>
 				</div>
 			</article>
@@ -265,7 +275,8 @@
 				</div>
 			
 				<form class="search_form">
-					<input type="text" class="input_field" placeholder="Найти..." maxlength=25>
+					<input type="text" class="input_field" placeholder="Найти...">
+					<input type="hidden" id="to_find" value="">
 					<button class="search_button"></button>
 				</form>
 
@@ -275,6 +286,7 @@
 			
 			<form class="side_sendlist">
 				<input type="text" class="input_email" placeholder="Ваш email-адрес">
+				<input type="hidden" id="email_to_add" value="">
 				<button class="subscribe">подписаться</button>
 			</form>
 			
@@ -337,36 +349,36 @@
 	</section>
 
 	<section class="shop_container">
-		<div class="item">
+		<form class="item">
 			<img class="item_photo" src="images/shop-item-desk1.jpg" alt="подушка">
 			<h3 class="item_header">подушки на диван</h3>
 			<span class="item_description">Набор из двух подушек с модными принтами. 
 			Видео о создании <a href="">здесь</a>.</span>
 			<span class="item_price_old">1000 &#8381;</span>
 			<span class="item_price_new">800 &#8381;</span>
-			<div class="item_link">в магазин</div>
+			<button class="item_link" name="button">в магазин</button>
 			<div class="item_frame"></div>
-		</div>
-		<div class="item">
+		</form>
+		<form class="item">
 			<img class="item_photo" src="images/shop-item-desk2.jpg" alt="кукла Зайка">
 			<h3 class="item_header">кукла «зайчик»</h3>
 			<span class="item_description">Интерьерная рукодельная кукла «Зайчик», созданию
 которой посвящена <a href="">весенняя серия постов</a> в блоге и несколько подкастов.</span>
 			<span class="item_price_old">&#65279;</span>
 			<span class="item_price_new">3500 &#8381;</span>
-			<div class="item_link">в магазин</div>
+			<button class="item_link" name="button">в магазин</button>
 			<div class="item_frame"></div>
-		</div>
-		<div class="item">
+		</form>
+		<form class="item">
 			<img class="item_photo" src="images/shop-item-desk3.jpg" alt="шестиугольная рамка">
 			<h3 class="item_header">шестиугольная рамка</h3>
 			<span class="item_description">Необычная рамка для украшения дома из видео <a href="">
 			«Как сделать рамку из подручных средств за 30 минут»</a></span>
 			<span class="item_price_old">500 &#8381;</span>
 			<span class="item_price_new">400 &#8381;</span>
-			<div class="item_link">в магазин</div>
+			<button class="item_link" name="button">в магазин</button>
 			<div class="item_frame"></div>
-		</div>
+		</form>
 	</section>
 	
 	<footer class="footer">
