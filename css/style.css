@@ -186,7 +186,7 @@ body {
 .trend_1, .trend_2, .trend_3, .trend_4 {
 	display: flex;
 	position: relative;
-	height: 319px;
+	min-height: 319px;
 	background-position: top;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -241,6 +241,7 @@ body {
 .trend_category{
 	display: flex;
 	position: relative;
+	flex-wrap: wrap;		
 	padding: 0;
 	list-style-type: none;
 	margin-top: 20px;
@@ -359,6 +360,9 @@ body {
 	font-family: "Open Sans", sans-serif;
 	margin-top: -8px;
 	text-decoration: none;		
+}
+.post_text:hover {
+	color:#b59f5b;
 }
 
 /*скрытое текстовое описание*/
@@ -551,6 +555,7 @@ body {
 .article_category {
 	display: flex;
 	position: relative;
+	flex-wrap: wrap;
 	padding: 0;
 	list-style-type: none;
 	margin-top: 20px;
@@ -581,8 +586,12 @@ body {
 		margin-bottom: 60px;
 	}
 	.article_photo {
-		width: 45%;
-		padding-right: 25px;
+		/*width: 44%;
+		*/
+		width: 381px;
+		height: 294px;
+		/*padding-right: 25px;
+		*/
 		align-self: start;
 	}
 	.article_category {
@@ -592,6 +601,7 @@ body {
 		display: flex;
 		flex-direction: column;
 		width: 350px;
+		padding-left:25px;
 	}
 
 	.article_title {
@@ -742,8 +752,7 @@ body {
 	display: flex;
 	position: relative;
 	flex-direction: column;
-	height: 247px;
-	width: 330px;
+	width: 345px;
 	border: 3px solid #b59f5b;
 	margin-top: -30px;
 }
@@ -767,8 +776,9 @@ body {
 	font-weight: 700;
 	font-family: "Open Sans", sans-serif;
 	margin-top: 53px;
-	margin-left: 5%;
-	margin-bottom: 0px;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-bottom: 5px;
 }
 
 .item_description {
@@ -777,7 +787,8 @@ body {
 	color: #0f0d0e;
 	font-weight: 400;
 	font-family: "Open Sans", sans-serif;
-	margin-left: 5%;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 .item_price_old {
@@ -788,7 +799,7 @@ body {
 	color: #0f0d0e;
 	font-weight: 700;
 	font-family: "Open Sans", sans-serif;
-	margin-left: 5%;
+	padding-left: 20px;
 	margin-top: 20px;
 }
 
@@ -799,7 +810,7 @@ body {
 	color: #0f0d0e;
 	font-weight: 700;
 	font-family: "Open Sans", sans-serif;
-	margin-left: 5%;
+	padding-left: 20px;
 }
 
 .item_link {
