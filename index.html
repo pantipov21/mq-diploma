@@ -1,9 +1,12 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+	<html lang="ru">
 	<head>
+		<title>Курсовая работа по HTML и CSS</title>
 		<link rel="stylesheet" href="css/style.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf-8">
 	</head>
+	
 	<body>
 	<header class="header">
 		<nav class="menu_and_logo_container">
@@ -31,7 +34,6 @@
 		<div class="popup_close"></div>
 		<div class="popup_title_container">
 			<div class="popup_title">ваш фидбек</div>
-			<div class="popup_line"></div>
 		</div>
 
 		<span class="popup_label">Как часто вы заходите на сайт?</span>
@@ -55,10 +57,11 @@
 	</form>
 
 	<section class="trends_header">
-		<span class="trends_title">сейчас в тренде</span>
+		<h2 class="trends_title">сейчас в тренде</h2>
 	</section>	
 	
 	<section class="trend_container">
+		<h2 class="visually-hidden">Секция о трендах</h2>
 		<article class="trend_1">
 			<div class="trend_border">
 				<ul class="trend_category">
@@ -112,6 +115,7 @@
 	
 	<div class="main_container">
 		<section class="article_container">
+			<h2 class="visually-hidden">Секция статей</h2>
 			<article class="article_item">
 				<img class="article_photo" src="images/last-post1.jpg" alt="статья про Питер">
 				<div class="article_text_container">
@@ -258,6 +262,7 @@
 
 		<aside class="aside_container">
 			<section class="side_posts_container">
+				<h2 class="visually-hidden">Секция боковых постов</h2>
 				<span class="side_new_posts">новые посты</span>
 				<article class="post_container">				
 					<img class="post_photo" src="images/2.jpg" alt="пост про Питер">
@@ -307,14 +312,16 @@
 			</section>
 			
 			<section>
+				<h2 class="visually-hidden">Секция строки поиска</h2>
 				<form class="search_form">
 					<div class="visually-hidden">В этой строке надо задать предмет поиска</div>
 					<input type="text" class="input_field" placeholder="Найти...">
-					<button class="search_button"><div class="visually-hidden">Эта кнопка запускает процесс поиска</div></button>
+					<button class="search_button"><span class="visually-hidden">Эта кнопка запускает процесс поиска</span></button>
 				</form>
 			</section>
 			
 			<section>
+				<h2 class="visually-hidden">Секция почтового ящика для рассылки</h2>
 				<form class="side_sendlist">
 					<span class="side_new_posts">рассылка</span>
 					<div class="visually-hidden">В этой строке надо ввести вдрес Вашей электронной почты</div>
@@ -325,6 +332,7 @@
 			
 			
 			<section class="tags_container">
+				<h2 class="visually-hidden">Секция тегов</h2>
 				<span class="side_new_posts">теги</span>
 				<ul class="tag_container">
 					<li class="tag"><a href="">fashion</a></li>
@@ -344,6 +352,7 @@
 			
 			
 			<section class="theme_list">
+				<h2 class="visually-hidden">Секция тематик (тем)</h2>
 				<span class="side_new_posts">темы</span>
 				<ul>
 					<li class="theme_container">
@@ -377,6 +386,7 @@
 	</div>
 
 	<section class="shop_header">
+		<h2 class="visually-hidden">Список наших изделий, представленных в магазине</h2>
 		<span class="shop_title">наши изделия</span>
 	</section>
 	
