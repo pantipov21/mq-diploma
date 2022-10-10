@@ -9,7 +9,7 @@
 @font-face {
 	font-family: 'Open Sans';
 	src: local('Open Sans'), url('../fonts/OpenSans-Bold.ttf') format("truetype"),
-	url('../fonts/OpenSans-Bold.woff') format("woff"),
+	url('../fonts/OpenSans-Bold.woff') format("wo--ff"),
 	url('../fonts/OpenSans-Bold.woff2') format("woff2");
 	font-weight: bold;
 }
@@ -179,7 +179,6 @@ body {
 	width: 100%;
 	margin-bottom: 50px;
 	justify-content: space-between;
-	align-items: space-between;
 	background-color: white;
 }
 
@@ -373,7 +372,6 @@ body {
 	margin: -1px;
 	padding: 0;
 	border: 0;
-	clip: rect(0 0 0 0);
 	overflow: hidden;
 } 
 
@@ -886,7 +884,7 @@ body {
 вёрстка popup-окна
 */
 body::after, .popup_window, .popup_close {
-	visibility: hidden;
+	visibility: visible;
 }
 body::after {
 	content: "";
@@ -931,21 +929,26 @@ body::after {
 	align-items: center;
 }
 .popup_title {
-	margin-top: 20px;
-	margin-bottom: 5px;
 	font-size: 18px;
 	line-height: 29px;
 	text-transform: uppercase;
 	color: #0f0d0e;
 	font-weight: 700;
 	font-family: "Open Sans", sans-serif;
-}
-.popup_line {
-	width: 66px;
-	height: 3px;
-	background-color: #b59f5b;
 	margin-bottom: 24px;
 }
+
+.popup_title::before {
+	content: "";
+	position: absolute;
+	background:#b59f5b;
+	width: 66px;
+	height: 3px;
+	top: 3.3em;
+	left:50%;
+	transform: translate(-50%);
+}
+
 .popup_select, .popup_label, .popup_radio_label {
 	font-size: 13px;
 	color: #000000;
@@ -957,7 +960,6 @@ body::after {
 	margin-bottom: 7px;
 	text-align: left;
 }
-
 
 .popup_select {
 	-webkit-appearance: none;
@@ -1043,6 +1045,7 @@ body::after {
 	margin-bottom: 25px;
 	outline: none;
 	border: none;
+	resize: none;
 }
 .popup_textarea:focus {
 	border: 1px solid #b59f5b;
